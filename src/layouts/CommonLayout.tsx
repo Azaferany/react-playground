@@ -1,12 +1,14 @@
 import React from "react";
 import { Outlet, useLocation, Link } from "react-router-dom";
 import { Layout, Menu } from "antd";
+import SecretDialog from "../features/Shared/SecretDialog";
 const { Header, Content, Footer } = Layout;
 
 const CommonLayout = () => {
   const location = useLocation();
   return (
     <Layout className="layout">
+      <SecretDialog />
       <Header>
         <div className="logo" />
         <Menu
