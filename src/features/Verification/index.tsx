@@ -62,7 +62,7 @@ const CodeVerification = () => {
       </Space>
       <Row justify={"center"}>
         {code.map((value, index) => (
-          <Col sm={{ span: 1 }}>
+          <Col sm={{ span: 1 }} key={index}>
             <Input
               style={{
                 textAlign: "center",
@@ -72,7 +72,9 @@ const CodeVerification = () => {
               onChange={(e) => handleCodeChange(index, e.target.value)}
               maxLength={1}
               onKeyDown={(event) => handleKeyDown(event, index)}
-              ref={(element) => (codeFields.current[index] = element!)}
+              ref={(element) =>
+                (codeFields.current[index] = element as InputRef)
+              }
             />
           </Col>
         ))}

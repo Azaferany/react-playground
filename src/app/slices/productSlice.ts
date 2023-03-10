@@ -1,4 +1,4 @@
-import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "../store";
 import { Add, Edit, GetList, Remove, Product } from "../services/ProductStore";
 
@@ -13,7 +13,6 @@ const initialState: ProductState = {
 export const productSlice = createSlice({
   name: "product",
   initialState,
-  // The `reducers` field lets us define reducers and generate associated actions
   reducers: {
     add: (state, { payload }: PayloadAction<Product>) => {
       Add(payload);

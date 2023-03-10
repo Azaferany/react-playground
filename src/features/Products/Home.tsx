@@ -1,3 +1,4 @@
+import React from "react";
 import { Row, Col } from "antd";
 import AddProduct from "./Add";
 import Table from "./Table";

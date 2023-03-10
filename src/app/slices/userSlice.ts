@@ -1,4 +1,4 @@
-import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "../store";
 import { Add, Edit, GetList, Remove, User } from "../services/UserStore";
 
@@ -13,7 +13,6 @@ const initialState: UserState = {
 export const userSlice = createSlice({
   name: "users",
   initialState,
-  // The `reducers` field lets us define reducers and generate associated actions
   reducers: {
     add: (state, { payload }: PayloadAction<User>) => {
       Add(payload);

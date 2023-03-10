@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 import { Button, Form, Input, InputNumber, Modal } from "antd";
 import { useDispatch } from "react-redux";
@@ -42,7 +43,7 @@ function Add() {
           >
             Submit
           </Button>,
-          <Button onClick={handleCancel} danger>
+          <Button key={"cancel"} onClick={handleCancel} danger>
             Cancel
           </Button>,
         ]}
