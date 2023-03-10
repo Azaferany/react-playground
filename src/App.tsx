@@ -5,6 +5,7 @@ import UserHome from "./features/Users/Home";
 import ProductHome from "./features/Products/Home";
 import EditUser from "./features/Users/Edit";
 import EditProduct from "./features/Products/Edit";
+import CodeVerification from "./features/Verification/index";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
           <Route index path="/users/edit/:id" element={<EditUser />} />
           <Route index path="/products" element={<ProductHome />} />
           <Route index path="/products/edit/:id" element={<EditProduct />} />
-          <Route index path="/verification" element={<h1 />} />
+          <Route index path="/verification" element={<CodeVerification />} />
         </Route>
       </Routes>
     </Router>
