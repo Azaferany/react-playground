@@ -11,12 +11,13 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<CommonLayout />} />
-        <Route path="/users" element={<UserHome />} />
-        <Route path="/users/edit/:id" element={<EditUser />} />
-        <Route path="/products" element={<ProductHome />} />
-        <Route path="/products/edit/:id" element={<EditProduct />} />
-        <Route path="/verification" element={<CodeVerification />} />
+        <Route path="/" element={<CommonLayout />}>
+          <Route index path="/users" element={<UserHome />} />
+          <Route index path="/users/edit/:id" element={<EditUser />} />
+          <Route index path="/products" element={<ProductHome />} />
+          <Route index path="/products/edit/:id" element={<EditProduct />} />
+          <Route index path="/verification" element={<CodeVerification />} />
+        </Route>
       </Routes>
     </Router>
   );
